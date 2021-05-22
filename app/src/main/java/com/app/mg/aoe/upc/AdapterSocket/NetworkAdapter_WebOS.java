@@ -1,6 +1,6 @@
-package com.app.mg.aoe.upc.AdapterSocket;
+//package com.app.mg.aoe.upc.AdapterSocket;
 
-
+/*
 public class NetworkAdapter_WebOS extends ViewModel {
 
     private final MutableLiveData<User> _user = new MutableLiveData<>();
@@ -54,3 +54,5 @@ class MainViewModel extends ViewModel {
         });
     }
 }
+
+*/

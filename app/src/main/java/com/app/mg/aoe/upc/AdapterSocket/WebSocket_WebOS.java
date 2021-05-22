@@ -1,7 +1,7 @@
-package com.app.mg.aoe.upc.AdapterSocket;
+//package com.app.mg.aoe.upc.AdapterSocket;
 
 
-
+/*
 public class WebSocket_WebOS extends Activity {
     private TextView output;
     @Override
@@ -35,3 +35,5 @@ public class WebSocket_WebOS extends Activity {
         output.append(string + "\n");
     }
 }
+
+*/

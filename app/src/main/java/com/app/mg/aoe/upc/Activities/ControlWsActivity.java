@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.app.mg.aoe.upc.Util.Variables;
 import com.app.mg.connectionlibraryandroid.Implementations.ClientMessageMethods;
 import com.app.mg.connectionlibraryandroid.Implementations.ConnectMethods;
 import com.app.mg.aoe.upc.Entities.MessageBody;
@@ -62,6 +63,33 @@ public class ControlWsActivity extends AppCompatActivity {
         btnDown.setOnTouchListener(new RepeatListener(50, 50, v -> SendMessageBody("DOWN")));
 
         btnRight.setOnTouchListener(new RepeatListener(50, 50, v -> SendMessageBody("RIGHT")));
+    }
+
+    protected void sensibilityControls(Bundle savedInstanceState) {
+
+        int btnUp_value = 0;
+        int btnDown_value = 0;
+        int rx_btnLeft = 100;
+        int rx_btnRight = 100;
+
+        if(rx_btnLeft > Variables.sensibilityValue || rx_btnLeft < (-1)*Variables.sensibilityValue){
+            btnUp_value =  Math.round(rx_btnLeft * 20.0f);
+            if(Math.abs(btnUp_value) > 150){
+                btnUp_value = 150 * (btnUp_value/Math.abs(btnUp_value));
+            }
+            //Toast.makeText(getApplicationContext(), "posxPuntoCentral: "+posxPuntoCentral, Toast.LENGTH_SHORT).show();
+        }else{
+            btnUp_value = 0;
+        }
+
+        if(rx_btnRight > Variables.sensibilityValue || rx_btnRight < (-1)*Variables.sensibilityValue){
+            btnDown_value =  Math.round(rx_btnRight * 20.0f);
+            if(Math.abs(btnDown_value) > 150){
+                btnDown_value = 150 * (btnDown_value/Math.abs(btnDown_value));
+            }
+        }else{
+            btnDown_value = 0;
+        }
     }
 
     private void connectWebSocket() {
