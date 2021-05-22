@@ -1,7 +1,7 @@
-//package com.app.mg.aoe.upc.AdapterSocket;
+package com.app.mg.aoe.upc.AdapterSocket;
 
 
-/*
+
 public class WebSocket_WebOS extends Activity {
     private TextView output;
     @Override
@@ -23,8 +23,8 @@ public class WebSocket_WebOS extends Activity {
                     new InputStreamReader(sk.getInputStream()));
             PrintWriter salida = new PrintWriter(
                     new OutputStreamWriter(sk.getOutputStream()), true);
-            log("enviando... Hola Mundo ");
-            salida.println("Hola Mundo");
+            log("enviando...");
+            salida.println("ip");
             log("recibiendo ... " + entrada.readLine());
             sk.close();
         } catch (Exception e) {
@@ -36,4 +36,3 @@ public class WebSocket_WebOS extends Activity {
     }
 }
 
-*/
